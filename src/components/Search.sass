@@ -1,0 +1,27 @@
+.search
+  background: #000000
+  padding: 25px
+  width: 100%
+  text-align: center
+  input
+    width: 50%
+    border-radius: 2rem 0 0 2rem
+    padding: 5px
+    outline: none !important
+  button
+    width: 10%
+    border-radius: 0 2rem 2rem 0
+    padding: 7px
+    cursor: pointer
+    color: #FFF
+    background: rgba(61, 148, 139, 1)
+    outline: none !important
+    border-width: 0
+    &:hover
+      background: lighten(rgba(61, 148, 139, 1), 10%)
+
+
+@media screen and (max-width: 360px)
+  .search
+    button
+      width: 13%

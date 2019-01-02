@@ -1,0 +1,34 @@
+.list-result
+  .result
+    display: flex
+    //flex-wrap: wrap
+    margin: 20px 0
+    background: gainsboro
+  .image-wrapper
+    cursor: pointer
+    img
+      width: 200px
+      height: 300px
+  .result-info
+    margin: 0 20px
+  .info-parameters
+    background: #FFFFFF
+    padding: 15px
+    .genres, .rating, .status, .url, .type
+      padding: 2px 0
+
+
+@media screen and (max-width: 480px)
+  .list-result
+    .result
+      flex-wrap: wrap
+      justify-content: center
+    .title
+      margin-top: 20px
+    .image-wrapper
+      margin-top: 20px
+      img
+        width: 250px
+    .result-info
+      margin-top: 15px
+      padding: 10px 0

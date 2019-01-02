@@ -1,0 +1,42 @@
+.info-result
+  background: gainsboro
+  padding: 20px
+  .container
+    display: flex
+    flex-direction: column
+    .info
+      display: flex
+      margin: 20px 0
+      .image-wrapper
+        cursor: pointer
+        img
+          width: 300px
+          height: 400px
+      .block-info
+        margin: 0 30px
+
+
+
+@media screen and (max-width: 778px)
+  .info-result
+    .container
+      .info
+        flex-wrap: wrap
+        justify-content: center
+        .block-info
+          margin-top: 20px
+
+
+@media screen and (max-width: 440px)
+  .info-result
+    .container
+      .info
+        .image-wrapper
+          img
+            width: 240px
+    .table
+      display: flex
+      flex-direction: column
+
+  .col
+    padding: 0
