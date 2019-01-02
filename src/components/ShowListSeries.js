@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import { Table } from "reactstrap";
 import { testNumberEpisode } from "../utils/TestNumberEpisode";
 import moment from "moment";
+import { cleanTextFromTags } from "../utils/СleanTextFromTags"
 import * as PropTypes from "prop-types";
 
 
@@ -22,7 +23,7 @@ class ShowListSeries extends React.Component {
             <div className="image-wrapper">
               <img src={data.image.original} alt={data.name}/>
             </div>
-            <div className="block-info"><b>Description:</b> {data.summary}</div>
+            <div className="block-info"><b>Description:</b> {cleanTextFromTags(data.summary)}</div>
           </div>
         </div>
 
@@ -42,7 +43,7 @@ class ShowListSeries extends React.Component {
                   <tr>
                     <td>{item.season}x{testNumberEpisode(item.number)}: <b>{item.name}.</b> <a href={item.url}>Episode {index + 1}</a></td>
                     <td>{moment(item.airdate).locale("en").format("MMM DD, YYYY")}</td>
-                    <td>{item.summary}</td>
+                    <td>{item.summary === null ? "The description has not yet come out" : cleanTextFromTags(item.summary)}</td>
                   </tr>
                 </tbody>
               );
